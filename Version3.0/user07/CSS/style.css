@@ -6,16 +6,20 @@ table {
 	text-align: left;
 	border-collapse: collapse;
 	cellspacing: 0px;
-}
-
+}td
+/td
+new button here 
 tr {
 	border: 1px solid #ffffff;
 	text-align: center;
 	background-color:#9FB6CD; 
-}
-
+}td 
+/td
+new button here 
 th {
 	text-align: center;
 	color: #ffffff;
 	background-color: #003366;
-}
+}td
+/td
+new button here 

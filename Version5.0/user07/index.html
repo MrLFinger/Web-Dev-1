@@ -32,6 +32,10 @@
 
     <!-- Custom styles for this template -->
     <style type="text/css">
+
+    body {
+        background-color: #cfd2d292;
+    }
         footer {
             font-size: 12px;
             text-align: center;
@@ -40,12 +44,12 @@
         .demo-content {
             padding: 15px;
             font-size: 18px;
-            background: #89a4cc;
+            background: #b9b9ba;
             margin-bottom: 15px;
         }
         
         .demo-content.bg-alt {
-            background: rgb(200,100,0, 0.4);
+            background: rgba(146, 109, 72, 0.4);
         }
         .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-color-type: var(--bs-table-striped-color);
@@ -58,11 +62,10 @@
 }
 
 .myButton {
-	box-shadow: 0px 1px 0px 2px #9fb4f2;
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
+
+	background-color:#93939371;
 	border-radius:10px;
-	border:1px solid #4e6096;
+	border:1px solid #afb0b3;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -75,18 +78,29 @@
 	text-shadow:0px 1px 0px #ffffff;
 }
 .myButton:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
+	background:linear-gradient(to bottom, #9c9c9c 5%, #a2a2a2 100%);
+	background-color:#9f9f9f;
 }
 .myButton:active {
 	position:relative;
 	top:1px;
 }
 
+.collapse {
+  margin-left: 35%;
+
+}
+.dropdown:hover {
+  color: #00bcd4; /* Change text color on hover */
+}
+
+
+
 
     </style>
 
     <body>
+
         <!---------------------------------- Begin the nav-bar ----------------------------------->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container-fluid">
@@ -106,16 +120,28 @@
                               Link
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="https://docs.google.com/document/d/1ns3ODb5UYgjS-VSIBES9PgfOqjD2A1J4At_h4Vl0zHk/edit?usp=sharing">Crime Sheet</a></li>
+                                    <a href ="https://docs.google.com/document/d/1ns3ODb5UYgjS-VSIBES9PgfOqjD2A1J4At_h4Vl0zHk/edit?usp=sharing" class="dropdown-menu"></a>
+                                <li><a class="dropdown-item" href="https://www.google.com/search?q=calculator&safe=active&ssui=on">Action Calc</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="mailto:sample@gmail.com?Subject=Hello" class="nav-link disabled" tabindex="-1">Contact</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                              Contacts
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="mailto:234853@shakopeeschools.org" target="_blank">Gmail</a></li>
+                                    <a href ="mailto:234853@shakopeeschools.org" target="_blank" class="dropdown-menu"></a>
+                                <li><a class="dropdown-item" href="https://www.instagram.com/bill.fidlesticks/">Instagram</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
                         <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your NavBar ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                     </ul>
@@ -242,29 +268,81 @@
             <div class="container mt-3 vstack" name="form-button">
                 <a href="form.html" class="btn btn-success btn-lg" role="button" aria-pressed="true">Form Page</a>
             </div>
+            <br>
         </main>
 
         <!---------------------------------- Begin the footer ------------------------------------->
-        <footer>
-            <span class="title">Example of a Footer Title</span>
-            <div class="container py-4" id="footerTable">
+
+
+        
+        <footer class="footer-box">
+            
+            
+            <style type="text/css">
+              .footer-box {
+
+                border-radius: 20px;
+                background-color: #22222244; 
+                color: #fff; 
+                padding: 15px; 
+                text-align: center;
+                border-top: 4px solid #b5b5b5; 
+                position: relative;
+                width: 70%; /* 50%*/
+                height: 100%;2
+                bottom: 0;
+                left: 220px; /*355px*/
+                box-shadow: 0 -2px 5px rgba(4, 4, 4, 0.3);
+              } 
+              h1 {
+                font-size: xx-large;
+                align-items: left;
+              } 
+              .myButton {
+                font-size: large;
+                align-items:  left;
+                color: #ffffff;
+              }
+              .mx-3 {
+                color: #fff;
+                align-content: left;
+              }
+              .container {
+                text-align: left;
+
+              }
+              .information {
+                text-align: right;
+                
+
+              }
+
+
+            
+              </style>
+
+            <div class="container" id="footerTable">
+                <h1> General Information</h1>
+                
+                    <p href="mailto:234853@shakopeeschools.org" target="_blank" class="myButton">Gmail</a>
                 <ul class="list-unstyled d-flex justify-content-center">
+                </b>
+                    
+
                     <li class="mx-3">
-                        <i class="fa-brands fa-facebook fa-3x" aria-hidden="true"></i>
+                        <a href="https://www.instagram.com/bill.fidlesticks/" target="_blank">
+                            <i class="fa-brands fa-instagram fa-3x" aria-hidden="true"></i>
+                         </a>
                     </li>
                     <li class="mx-3">
-                        <i class="fa-brands fa-x-twitter fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-instagram fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
-                    </li>
-                    <li class="mx-3">
-                        <i class="fa-brands fa-tiktok fa-3x" aria-hidden="true"></i>
+                        <a href="https://github.com/Paperbags0/Web-Dev-1">
+                            <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
+                        </a>
                     </li>
                 </ul>
+            </div>
+
+
             </div>
         </footer>
         <!---------------------------------- End the footer --------------------------------------->

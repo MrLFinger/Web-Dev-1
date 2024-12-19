@@ -44,7 +44,7 @@ img {
 .front,
 .back {
     width: 250px;
-    height: 320px;
+    height: 270px;
 }
 
 .container:hover .flipper {
@@ -74,4 +74,8 @@ p.caption {
     font-size: 0.9em;
     padding: 0 20px 20px 20px;
     text-align: left;
+}
+
+.mask {
+    width: 90px
 }

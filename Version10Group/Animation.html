@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="SHS WebDev Version 5.0 - Index Bootstrap Examples">
+    <script src="JS/animation script.js"></script>
 
     <!-- CSS -->
     <!-- Bootstrap -->
@@ -36,7 +37,6 @@
 
     h2{padding: 20px;}
     
-
     footer {
     background-color: #2d3a3d;
     color: #fff;
@@ -82,7 +82,7 @@
     }
 
     section p {
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1.8;
     max-width: 900px;
     margin: 0 auto;
@@ -97,7 +97,7 @@
     footer p {
     font-size: 1em;
     }
-
+    
     .mh-100 {color: blue;}
     
     </style>
@@ -114,7 +114,7 @@
     
     <section id="intro">
         <div class="container">
-            <h2>What are CSS Animations?</h2>
+            <h2 onmouseover="style.color='green'" onmouseout="style.color='black'">What are CSS Animations?</h2>
             <p>CSS animations allow you to animate transitions between one CSS style to another. This can bring your web page to life with smooth effects and transitions. Animations can be triggered by user interactions or can run automatically.</p>
         </div>
     </section>
@@ -196,9 +196,9 @@
             <h2>1. Creating a gallery.css file</h2>
             <p>We will start from the top and work our way down. You can start by creating a new .css file and name it gallery.css The file is already linked in head of your .html file, so make sure you name it with correct spelling!</p>
 
-            <h2>2. Copy and paste the code shown below into your gallery.css file.</h2>
-            <p></p>
-
+            <h2>2. Creating a ID!</h2>
+           
+            <h4>Copy and paste the code shown below into your gallery.css file</h4>
                 <xmp>
             #gallery {
                 font-family: "Orbitron", sans-serif;
@@ -207,10 +207,95 @@
               }
                 </xmp>
 
-            <p>The added code should look like this:</p>
+            <h4>The most outer "div"(line #1 from above) has the id "gallery" so we will start by giving that "div" 3 basic styles; a font, a specific line height, and alignment of the text to the center.</h4>
+
+            <p><b>The added code should look like this:</b></p>
+            <img src="1.4d example code.jpg" class="w-100 ">
 
             
 
+            <h2>3. Creating a container!</h2>
+                <h4>Copy and paste the code from below into your gallery.css file </h4>
+                    <xmp>
+                        .container {
+                            display: inline-block;
+                            margin: 3%;
+                            perspective: 1000px;
+                        }
+                    </xmp>
+            <h4>This is the "div" that has the class "container". We want the items to have a set width and height and be able to give them a margin and padding so we change the display to inline-block. When choosing a margin we can choose from a large variety of units, for this example we will use percentage. <b>Not much will really change except the margin size so an example won't be shown here.</b> </h4>
+            
+            <h2>4. Creating a flipper!</h2>
+            <h4>Copy and paste the code from below into your gallery.css file </h4>
+            <xmp>
+                .flipper {
+                    position: relative;    
+                    transition: 0.6s;
+                    transform-style: preserve-3d;
+                }
+            </xmp>
+
+            <h4>Moving to the "div" that has the class "flipper". Since the "flipper" is a child of the container we will use the relative position.  Using the relative position will mean we can position the "flipper" div relative inside of the "container" div.  The relative position is very straightforward, it just means that the element is positioned relative to its normal position. Transition will determine how long our animation will take, in this case 6 seconds. <b>This styling will not change anything at all for the time being so an example won't be provided.</b></h4>
+
+            <h2>5. Adding front and back cards!</h2>
+            <h4>Copy and paste the code from below into your gallery.css file.</h4>
+
+            <xmp>
+            .front, .back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 320px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                backface-visibility: hidden;
+                }
+
+            .front{
+                    z-index:2;
+                }
+                
+            .back{
+                    transform:rotateY(180deg);
+                }
+                </xmp>
+
+            <h4>The last 2 div's we will style are the "front" and "back".  We will use 3 different selectors 1 we will combine styling for the "front" and "back" and 1 each for seperate "front" and "back" styling. Backface-visibility is yet another obscure property.  When we turn an object around or transform it we can make sure we don't see the "backside" of that object.  In this case think of a playing card, when you flip it over you reveal the number/color/suit, when we hide the visibility we see nothing. Adding this code should result in a pile of messiness when opening the live sever!</h4>
+            <p><b>The added code should look like this:</b></p>
+            <img src="1.4d example code2.jpg" class="w-100 ">
+
+            <h2>6. Adding an image width!</h2>
+            <h4>Copy and paste the code from below into your gallery.css file.</h4>
+            <xmp>
+                img {
+                    width: 100%;
+                  }
+            </xmp>
+
+            <h4>The images are all over the place, 3 very different sizes, so adding this will change the size of the image to fit their container.</h4>
+            <p><b>The added code should look like this:</b></p>
+            <img src="1.4d example code3.jpg" class="w-100 ">
+
+            <h2>7. Seperating and adding animation to the cards!</h2>
+            <h4>Copy and paste the code from below into your gallery.css file.</h4>
+            <xmp>
+                .container, .front, .back {
+                    width: 250px;
+                    height: 320px;
+                }
+
+                .container:hover .flipper {
+                    transform: rotateY(180deg);
+                  }
+            </xmp>
+
+            <h4>To make the cards separated and not on top of each other let's give them a specific size. If you want to change the size here is where you can do that. Using the hover pseudo class here will make just a space between .container:hover and .flipper. This means that .flipper needs to be child of .container in order to work.</h4>
+            <p><b>The final code added should look like this for the front and back side of the card:</b></p>
+
+            <img src="1.4d example code4.jpg" class="w-100 ">
+            <img src="1.4d example code5.jpg" class="w-100 ">
+
+            <h2>Congratulations, now you have animated cards!</h2>
     </section>
 
     <footer>

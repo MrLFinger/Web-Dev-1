@@ -1,7 +1,7 @@
 .button {
 	background-color: #ffffff;
 	border: none;
-	color: rgb(238, 24, 24);
+	color: rgb(139, 227, 227);
 	padding: 20px;
 	text-align: center;
 	text-decoration: none;
@@ -21,7 +21,7 @@
 }
 
 .red {
-	background-color: #ff0000;
+	background-color: #51d6e4;
 }
 
 td{
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6{
 	text-align:center;
 }
 .title{
-    color: red;
+    color: rgb(49, 192, 235);
     font-family: 'Trebuchet MS', sans-serif; 
   }
   
